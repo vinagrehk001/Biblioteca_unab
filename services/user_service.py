@@ -14,13 +14,13 @@ class UserService:
         self.library.users.append(user)
 
     @log_operation
-    def list_users():
+    def list_users(self):
 
-        if len(Self.library.users) == 0:
+        if len(self.library.users) == 0:
             print("No se encontraron usuarios registrados")
             return
 
-        for user in Self.library.users:
+        for user in self.library.users:
             print(
                 user.show_information()
             )
